@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import OAuth from '../components/OAuth';
@@ -45,7 +45,7 @@ export default function Signup() {
         displayName: name,
       });
       const user = userCredential.user;
-      const formDataCopy = { ...FormData };
+      const formDataCopy = { ...formData };
       delete formData.password;
       formDataCopy.timestamp = serverTimestamp();
       await setDoc(doc(db, 'users', user.uid), formDataCopy);
