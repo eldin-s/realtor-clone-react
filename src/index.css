@@ -17,4 +17,13 @@ body {
   transition: all 150ms ease-in-out;
 }
 
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #a8dadc;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #a8dadc !important;
+}
+
 /* px-7 py-3 font-medium text-sm uppercase rounded shadow-md  */
